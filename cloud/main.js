@@ -4,6 +4,11 @@ AV.Cloud.define("hello", function(request, response) {
  response.success("Hello world!");
 });
 
+AV.Cloud.define("world", function(request, response) {
+ response.success("say good bye!");
+});
+
+
 AV.Cloud.define("averageStars", function(request, response) {
   var query = new AV.Query("Review");
   query.equalTo("movie", request.params.movie);
