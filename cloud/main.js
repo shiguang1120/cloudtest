@@ -32,7 +32,7 @@ AV.Cloud.define("getStars", function(request, response) {
   query.equalTo("movie", request.params.movie);
   query.find({
     success: function(results) {
-      sponse.success(results);
+      sponse.success(results.length);
     },
     error: function() {
       response.error("movie lookup failed");
