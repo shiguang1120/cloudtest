@@ -36,7 +36,7 @@ AV.Cloud.define("getStars", function(request, response) {
       for (var i = 0; i < results.length; ++i) {
         sum += results[i].get("stars");
       }
-      response.success(sum / results.length);
+      response.success(results.length);
     },
     error: function() {
       response.error("movie lookup failed");
